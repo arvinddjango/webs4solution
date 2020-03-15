@@ -1,0 +1,58 @@
+Microsoft Windows [Version 10.0.17134.950]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\kumar>e:
+
+E:\>mkdir testavi
+
+E:\>cd testavi
+
+E:\testavi>pip install virtualenv
+Requirement already satisfied: virtualenv in c:\users\kumar\appdata\local\programs\python\python37-32\lib\site-packages (16.6.1)
+WARNING: You are using pip version 19.1, however version 19.2.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+E:\testavi>python -m venv webs4env
+
+E:\testavi>webs4env\Scripts\activate
+
+(webs4env) E:\testavi>python -m pip install --upgrade pip
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/30/db/9e38760b32e3e7f40cce46dd5fb107b8c73840df38f0046d8e6514e675a1/pip-19.2.3-py2.py3-none-any.whl (1.4MB)
+    100% |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 1.4MB 586kB/s
+Installing collected packages: pip
+  Found existing installation: pip 10.0.1
+    Uninstalling pip-10.0.1:
+      Successfully uninstalled pip-10.0.1
+Successfully installed pip-19.2.3
+
+(webs4env) E:\testavi>pip install django
+Collecting django
+  Downloading https://files.pythonhosted.org/packages/94/9f/a56f7893b1280e5019482260e246ab944d54a9a633a01ed04683d9ce5078/Django-2.2.5-py3-none-any.whl (7.5MB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 7.5MB 595kB/s
+Collecting sqlparse (from django)
+  Using cached https://files.pythonhosted.org/packages/ef/53/900f7d2a54557c6a37886585a91336520e5539e3ae2423ff1102daf4f3a7/sqlparse-0.3.0-py2.py3-none-any.whl
+Collecting pytz (from django)
+  Downloading https://files.pythonhosted.org/packages/87/76/46d697698a143e05f77bec5a526bf4e56a0be61d63425b68f4ba553b51f2/pytz-2019.2-py2.py3-none-any.whl (508kB)
+     |¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦| 512kB 1.7MB/s
+Installing collected packages: sqlparse, pytz, django
+Successfully installed django-2.2.5 pytz-2019.2 sqlparse-0.3.0
+
+(webs4env) E:\testavi>pip freeze>requirments.txt
+
+(webs4env) E:\testavi>python
+Python 3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 14:05:16) [MSC v.1915 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+
+(webs4env) E:\testavi>django-admin startproject webs4solution
+
+(webs4env) E:\testavi>cd webs4solution
+
+(webs4env) E:\testavi\webs4solution>python manage.py startapp webs4solutionapp
+
+(webs4env) E:\testavi\webs4solution>python manage.py startapp websblog
+
+(webs4env) E:\testavi\webs4solution>python manage.py startapp webs4solutionapp
+
+(webs4env) E:\testavi\webs4solution>

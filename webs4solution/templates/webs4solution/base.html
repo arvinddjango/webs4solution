@@ -1,0 +1,776 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{%block title_block%}{%endblock%}</title>
+    <link rel="icon" href="{% static 'img/webs4solution_fevicon.png'%}" type="image/png">
+
+    <meta name="keywords" content="HTML5 Template"/>
+
+    <meta name="description"
+          content="Read Here Trending blogs about iPhone, Android, Flutter, Angular, Hybrid, ionic, Python, PHP, Laravel, Mobile Apps Blog entries at webs4solution’s official blog">
+
+    <meta name="author" content="webs4solution.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Trending Web &amp; Mobile App Technology Blogs | webs4solution"/>
+
+    <meta name="twitter:description"
+          content="Read Here Trending blogs about iPhone, Android, Flutter, Angular, Hybrid, ionic, Python, PHP, Laravel, Mobile Apps Blog entries at webs4solution’s official blog"/>
+
+    <meta name="twitter:image" content="{% static 'img/ionic-Framework-01.jpg'%}"/>
+    <link rel="canonical" href="/blog">
+
+
+    <meta name="google-site-verification" content="mLufpYLVwKA2hQevML8KRQA8Iu9-Hw-hew5ZElnXq30"/>
+    <meta name="msvalidate.01" content="7B79FB83F6A77005859F705126DE4E95"/>
+
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/animate/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/linear-icons/css/linear-icons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl.carousel/assets/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/magnific-popup/magnific-popup.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/intlTelInput.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'css/theme-elements.css' %}">
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/rs-plugin/css/settings.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/rs-plugin/css/layers.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/rs-plugin/css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/skins/default.css' %}">
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Website",
+            "name": "webs4solution",
+            "url": "https://webs4solution.com",
+            "image": "https://webs4solution.com/img/webs4solution_logo.png",
+            "sameAs": [
+                "https://www.facebook.com/webs4solution",
+                "https://www.linkedin.com/company/webs4solution",
+                "https://www.youtube.com/channel/UCrns21LkQY0Mc08VDGao7Bw"
+            ]
+        }
+    </script>
+    <script type='text/javascript'>
+window.__lo_site_id = 135252;
+
+  (function() {
+    var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+    wa.src = "{%static 'd10lpsik1i8c69.cloudfront.net/w.js'%}";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+    })();
+    </script>
+    <!-- Global site tag (gtag.js) - Google Ads: 822469284 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-822469284"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-822469284');
+    </script>
+    <!-- <script src="//code.jivosite.com/widget.js" jv-id="MLyEer7s6T" async></script> -->
+    <!--Start of Tawk.to Script-->
+    <script src="{% static 'code.jivosite.com/widget.js'%}" jv-id="MLyEer7s6T" async></script>
+    <!--End of Tawk.to Script-->
+<script src="//code.jivosite.com/widget/Se6DiThxDC" async></script>
+<!--<script src="//code.jivosite.com/widget/pOx5FGWcHm" async></script>  latest update only for test-->
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e03875227773e0d832aa70b/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</head>
+
+<body>
+<div class="body">
+    <header id="header" class="header-effect-shrink"
+            data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 120}">
+        <div class="header-body">
+            <div class="header-container container">
+                <div class="header-row">
+                    <div class="header-column justify-content-start">
+                        <div class="header-logo">
+                            <a href="/">
+                                <img alt="Webs4solution" height="150" src="{% static 'img/webs4solution_logo.png'%}">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-column justify-content-end">
+                        <div class="header-nav">
+                            <div class="header-nav-main">
+                                <nav class="collapse">
+                                    <ul class="nav flex-column flex-lg-row" id="mainNav">
+                                        <li class="dropdown"><a class="dropdown-item dropdown-toggle"
+                                                                href="/who-we-are" title="who we are"> Who We
+                                            Are </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/career"
+                                                       title="Career">Career</a>
+                                                </li>
+                                                <!--<li><a class="dropdown-item" href="infrastructure.html"
+                                                       title="Infrastructure">Infrastructure</a>
+                                                </li>-->
+                                                <li><a class="dropdown-item" href="/team" title="our team">Our
+                                                    Team</a>
+                                                </li>
+
+                                                <li><a class="dropdown-item" title="Development process"
+                                                       href="/development_process">Development Process</a>
+                                                </li>
+                                                <li><a class="dropdown-item" title="Support"
+                                                       href="/support">Support</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown dropdown-mega dropdown-mega-style-2"><a
+                                                class="dropdown-item dropdown-toggle" href="/what-we-do"
+                                                title="what we do">What We Do</a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <div class="dropdown-mega-content container main-menu">
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                                <a class="text-uppercase font-13"
+                                                                   href="javascript:void(0);" title="Open Source"><span
+                                                                        class="dropdown-mega-sub-title">Mobile App Development</span></a>
+
+                                                                <ul class="dropdown-mega-sub-nav">
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/ios-app-development-services"
+                                                                           title="ios App Development">ios App
+                                                                        Development</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/android-app-development"
+                                                                           title="android app development">Android App
+                                                                        Development</a>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-lg-4"><a class="text-uppercase font-13"
+                                                                                     title="web development"
+                                                                                     href="/web-development-services"><span
+                                                                    class="dropdown-mega-sub-title">Web Development</span></a>
+                                                                <ul class="dropdown-mega-sub-nav">
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/php-development"
+                                                                           title="php development">PHP Development</a>
+                                                                    </li>
+
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/laravel-development"
+                                                                           title="laravel development">Laravel
+                                                                        Development</a>
+                                                                    </li>
+
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/python-web-development"
+                                                                           title="Python Development">Python
+                                                                        Development</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/django-web-development-services"
+                                                                           title="Django Web Development">Django
+                                                                        Development</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-lg-4">
+
+                                                                <a class="text-uppercase font-13"
+                                                                   href="javascript:void(0);" title="Open Source"><span
+                                                                        class="dropdown-mega-sub-title">Open Source</span></a>
+                                                                <ul class="dropdown-mega-sub-nav">
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/wordpress-development"
+                                                                           title="wordpress development">WordPress
+                                                                        Development</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/drupal-development"
+                                                                           title="Drupal development">Drupal
+                                                                        Development</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/magento-development"
+                                                                           title="magento development">Magento
+                                                                        Development</a>
+                                                                    </li>
+                                                                </ul>
+
+                                                                <a class="text-uppercase font-13"
+                                                                   href="/ui-ux-design" title="UI/UX Design"><span
+                                                                        class="dropdown-mega-sub-title">UI / UX Design</span></a>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- Tender Mega Menu Start Here -->
+                                                       <li class="dropdown dropdown-mega dropdown-mega-style-2"><a
+                                                class="dropdown-item dropdown-toggle" href="/tender-support"
+                                                title="Tender Support">Tender Support</a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <div class="dropdown-mega-content container main-menu">
+                                                        <div class="row">
+                                                         <div class="col-lg-3"><a class="text-uppercase font-13"
+                                                                                     href="javascript:void(0);"
+                                                                                     title="Tender Bidding"><span
+                                                                    class="dropdown-mega-sub-title">Tender Bidding</span></a>
+                                                                <ul class="dropdown-mega-sub-nav">
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/bid-particiaption"
+                                                                           title="Bid Particiaption">Bid Particiaption</a>
+                                                                    </li>
+
+                                                                </ul>
+
+
+                                                            </div>
+                                                           <div class="col-lg-3"><a class="text-uppercase font-13"
+                                                                                     href="javascript:void(0);"
+                                                                                     title="GeM(Governement e Marketplace)"><span
+                                                                    class="dropdown-mega-sub-title">GeM(Governement e Marketplace)</span></a>
+                                                                <ul class="dropdown-mega-sub-nav">
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/government-e-marketplace"
+                                                                           title="GeM Support">GeM Support</a>
+                                                                    </li>
+
+                                                                </ul>
+
+
+                                                            </div>
+                                                            <div class="col-lg-3"><a class="text-uppercase font-13"
+                                                                                     href="javascript:void(0);"
+                                                                                     title="DSC Support"><span
+                                                                    class="dropdown-mega-sub-title">DSC Support</span></a>
+                                                                <ul class="dropdown-mega-sub-nav">
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/digital-signature-certificate"
+                                                                           title="digital dignature certificate">Digital Signature Certificate</a>
+                                                                    </li>
+
+                                                                </ul>
+
+
+                                                            </div>
+                                                              <div class="col-lg-3"><a class="text-uppercase font-13"
+                                                                                     href="javascript:void(0);"
+                                                                                     title="MSME Certification"><span
+                                                                    class="dropdown-mega-sub-title">MSME Certification</span></a>
+                                                                <ul class="dropdown-mega-sub-nav">
+                                                                    <li><a class="dropdown-item"
+                                                                           href="/msme"
+                                                                           title="msme certificate">Udhyog Adhar Certificate</a>
+                                                                    </li>
+                                                                     <li><a class="dropdown-item"
+                                                                           href="/start-up-india"
+                                                                           title="Start Up India Certificate">Start Up India Certificate</a>
+                                                                    </li>
+
+                                                                </ul>
+
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- Tender Mega Menu End Here -->
+
+                                        <!--<li class="dropdown dropdown-mega dropdown-mega-style-2"><a
+                                                class="dropdown-item dropdown-toggle" href="javascript:void(0);"
+                                                title="Hire Developers">Hire Developers</a>
+                                            <ul class="dropdown-menu second-menu">
+                                                <li>
+                                                    <div class="dropdown-mega-content container main-menu">
+                                                        <div class="row">
+                                                            <div class="col-lg-6"><a class="text-uppercase font-13"
+                                                                                     href="hire-mobile-app-developers.html"
+                                                                                     title="Hire Mobile Developers"><span
+                                                                    class="dropdown-mega-sub-title">Hire Mobile Developers</span></a>
+                                                                <ul class="dropdown-mega-sub-nav">
+
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-ios-app-developer.html"
+                                                                           title="Hire iOS App Developer">Hire iOS App
+                                                                        Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-android-app-developer.html"
+                                                                           title="Hire Android App Developer">Hire
+                                                                        Android App Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-ionic-app-developer.html"
+                                                                           title="Hire Ionic App Developer">Hire Ionic
+                                                                        App Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-reactnative-app-developer.html"
+                                                                           title="Hire Reactnative App Developer">Hire
+                                                                        Reactnative App Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-flutter-app-developer.html"
+                                                                           title="Hire Flutter App Developer">Hire
+                                                                        Flutter App Developers</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="col-lg-6"><a class="text-uppercase font-13"
+                                                                                     href="hire-web-developers.html"
+                                                                                     title="Hire Web Developers"><span
+                                                                    class="dropdown-mega-sub-title">Hire Web Developers</span></a>
+                                                                <ul class="dropdown-mega-sub-nav">
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-php-developers.html"
+                                                                           title="Hire Php Web Developers">Hire Php Web
+                                                                        Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-laravel-developers.html"
+                                                                           title="Hire Laravel Developers">Hire Laravel
+                                                                        Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-java-developers.html"
+                                                                           title="Hire Java Developers">Hire Java
+                                                                        Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-spring-boot-developers.html"
+                                                                           title="Hire Spring Boot developers">Hire
+                                                                        Spring Boot developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-nodejs-developers.html"
+                                                                           title="Hire- Nodejs Developers">Hire Nodejs
+                                                                        Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-angular-developers.html"
+                                                                           title="Hire Angular Developers">Hire Angular
+                                                                        Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-reactjs-developers.html"
+                                                                           title="Hire ReactJs Developers">Hire ReactJs
+                                                                        Developers</a>
+                                                                    </li>
+                                                                    <li><a class="dropdown-item"
+                                                                           href="hire-python-developers.html"
+                                                                           title="Hire Python Developers">Hire Python
+                                                                        Developers</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>-->
+                                        <li class="dropdown"><a class="dropdown-item" href="/packages"
+                                                                title="Packages">Packages</a>
+                                        </li>
+                                        <li class="dropdown"><a class="dropdown-item" href="/portfolio"
+                                                                title="Our Work">Our Work</a>
+                                        </li>
+                                        <li class="dropdown"><a class="dropdown-item" href="/blog"
+                                                                title="blog">Blog</a>
+                                        </li>
+                                        <!--<li class="dropdown"><a class="dropdown-item" href="products.html"
+                                                                title="products">Products</a>
+                                        </li>-->
+
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header-button d-sm-flex ml-3">
+                                <a href="/contactus" data-hash data-hash-offset="140" title="Contact Us"
+                                   class="btn btn-outline btn-rounded btn-primary btn-4 btn-icon-effect-1"> <span
+                                        class="wrap"> <span>Contact Us</span>  <i class="fas fa-user-tie"></i>
+                                        </span>
+                                </a>
+                            </div>
+                                       <!-- User Button -->
+                            {% if user.is_authenticated %}
+                            <div class="header-button d-sm-flex ml-3 btn-group">
+                                <button type="button" data-hash data-hash-offset="140"
+                                        title="Blog Comment by {{request.user}}"
+                                        class="btn btn-outline btn-rounded btn-primary btn-4 btn-icon-effect-1 dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{request.user|upper}}
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/logout">Logout</a>
+                                </div>
+                            </div>
+                            {% else %}
+                            <div class="header-button d-sm-flex ml-3 btn-group">
+                                <button type="button" data-hash data-hash-offset="140" title="Blog Comment Login"
+                                        class="btn btn-outline btn-rounded btn-primary btn-4 btn-icon-effect-1 dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New User
+                                </button>
+
+                                <div class="dropdown-menu">
+                                    <button type="button" data-hash data-hash-offset="140" title="Blog Comment Login"
+                                            class="btn btn-outline btn-rounded btn-primary btn-4 btn-icon-effect-1 dropdown-item"
+                                            data-toggle="modal" data-target="#signupModal"><span
+                                            class="wrap"> <span>Sign Up</span>  <i class="fas fa-user-tie"></i>
+                                        </span>
+                                    </button>
+
+                                    <button type="button" data-hash data-hash-offset="140" title="Blog Comment Login"
+                                            class="btn btn-outline btn-rounded btn-primary btn-4 btn-icon-effect-1 dropdown-item"
+                                            data-toggle="modal" data-target="#loginModal"><span
+                                            class="wrap"> <span>Login</span>  <i class="fas fa-user-tie"></i>
+                                        </span>
+                                    </button>
+
+                                </div>
+                            </div>
+                            {% endif %}
+
+                            <!--<div class="header-button d-sm-flex ml-3">
+                                <button type="button" data-hash data-hash-offset="140" title="Blog Comment Login" class="btn btn-outline btn-rounded btn-primary btn-4 btn-icon-effect-1" data-toggle="modal" data-target="#loginModal"><span
+                                   class="wrap"> <span>Login</span>  <i class="fas fa-user-tie"></i>
+                                   </span>
+</button>
+                       </div>-->
+                            <button class="header-btn-collapse-nav ml-3" data-toggle="collapse"
+                                    data-target=".header-nav-main nav"><span
+                                    class="hamburguer"> <span></span>  <span></span>  <span></span> </span> <span
+                                    class="close"> <span></span>  <span></span> </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Blog Comment/Reply SignUp/Login Here</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+
+                </div>
+                <div class="modal-body">
+                    <form action="/login" method="post">
+                        {% csrf_token %}
+                        <div class="form-group row">
+                            <label for="loginusername"
+                                   class="col-sm-3 col-form-label col-form-label-lg">Username:</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="loginusername" id="loginusername" class="form-control"
+                                       placeholder="Type your name..." required/>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="loginpass" class="col-sm-3 col-form-label col-form-label-lg">Password:</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control form-control-lg" name="loginpass"
+                                       id="loginpass" placeholder="Type your Passward">
+                            </div>
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Login Model -->
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="signupModalLabel">Blog Comment/Reply SignUp Here</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+
+                </div>
+                <div class="modal-body">
+                    <form action="/signup" method="post">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-12">Username:</label>
+
+                            <input type="text" name="username" id="username" class="form-control"
+                                   placeholder="Type your Unique username(lowercase & numeric)." required/>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="fname" class="col-sm-12">First Name:</label>
+
+                            <input type="text" name="fname" id="fname" class="form-control"
+                                   placeholder="Type your First name..." required/>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="lname" class="col-sm-12">Last Name:</label>
+
+                            <input type="text" name="lname" id="lname" class="form-control"
+                                   placeholder="Type your Last name..." required/>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-12">Email Id:</label>
+
+                            <input type="email" name="email" id="email" class="form-control"
+                                   placeholder="Type your email..." required/>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="pass1" class="col-sm-12">Choose a Password:</label>
+                            <input type="password" class="form-control" id="pass1" name="pass1"
+                                   placeholder="Type your Passward" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pass2" class="col-sm-12">Confirm Password:</label>
+
+                            <input type="password" class="form-control" id="pass2" name="pass2"
+                                   placeholder="Renter Passward" required>
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Sign Up Model -->
+
+      <!-- For message display Here -->
+    <div class="container">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message : </strong> {{ message }}.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    <!-- For End message display Here -->
+
+
+    {% block body %} {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120935028-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120935028-1');
+
+    </script>
+    <section>
+        <div class="fb-share-btn">
+            <ul class="social-icons social-icons-transparent social-icons-icon-light social-icons-lg">
+                <li class="social-icons-facebook">
+                    <a href="http://www.facebook.com/sharer.php?u=https://webs4solution.com/blog" rel="nofollow"
+                       target="_blank" title="Facebook"> <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="social-icons-twitter">
+                    <a href="https://twitter.com/share?url=https://webs4solution.com/blog" rel="nofollow"
+                       target="_blank" title="Twitter"> <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social-icons-linkedin">
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://webs4solution.com/blog"
+                       rel="nofollow" target="_blank" title="Linkedin"> <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li class="social-icons-whatsapp">
+                    <a href="https://api.whatsapp.com/send?text=https://webs4solution.com/blog" rel="nofollow"
+                       target="_blank" title="Whatsapp"> <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- footer here -->
+{% include 'includes/footer.html' %}
+    <!-- end footer -->
+
+</div>
+<script>
+    function changeCode(){
+        var countryCodeDigit = $('ul.country-list').find('li.active').attr('data-dial-code');
+        $('input[name=countryCode]').val(countryCodeDigit);
+    }
+    function changeCode(){
+        var countryCodeDigit = $('ul.country-list').find('li.active').attr('data-dial-code');
+        $('input[name=countryCode1]').val(countryCodeDigit);
+    }
+    function isNumberKey(evt){
+        changeCode();
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+
+</script>
+<script src="{%static 'vendor/jquery/jquery.min.js'%}"></script>
+<script async src="{%static 'vendor/modernizr/modernizr.min.js'%}"></script>
+<script src="{%static 'vendor/jquery.appear/jquery.appear.min.js'%}"></script>
+<script src="{%static 'vendor/jquery.easing/jquery.easing.min.js'%}"></script>
+<script src="{%static 'vendor/jquery-cookie/jquery-cookie.min.js'%}"></script>
+<!-- <script src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
+<script src="{%static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+<script src="{%static 'vendor/common/common.min.js'%}"></script>
+<script src="{%static 'vendor/jquery.validation/jquery.validation.min.js'%}"></script>
+<script src="{%static 'vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js'%}"></script>
+<script src="{%static 'vendor/jquery.gmap/jquery.gmap.min.js'%}"></script>
+<script src="{%static 'vendor/jquery.lazyload/jquery.lazyload.min.js'%}"></script>
+<script src="{%static 'vendor/isotope/jquery.isotope.min.js'%}"></script>
+<script src="{%static 'vendor/owl.carousel/owl.carousel.min.js'%}"></script>
+<script src="{%static 'vendor/magnific-popup/jquery.magnific-popup.min.js'%}"></script>
+<script src="{%static 'vendor/vide/vide.min.js'%}"></script>
+<script src="{%static 'vendor/vivus/vivus.min.js'%}"></script>
+<script src="{%static 'js/theme.js'%}"></script>
+<script src="{%static 'vendor/rs-plugin/js/jquery.themepunch.tools.min.js'%}"></script>
+<script src="{%static 'vendor/rs-plugin/js/jquery.themepunch.revolution.min.js'%}"></script>
+<script src="{%static 'js/intlTelInput.js'%}"></script>
+<script src="{%static 'js/theme.init.js'%}"></script>
+<script src="{%static 'js/examples/examples.portfolio.js'%}"></script>
+<script src="{%static 'js/swiper.min.js'%}"></script>
+<script src="{%static 'js/custom.js'%}"></script>
+
+
+<!-- end -->
+
+<!-- Right click stop code -->
+<!-- <script>
+        document.onkeydown = function(e) {
+            if(event.keyCode == 123) {
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+                return false;
+            }
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+                return false;
+            }
+        }
+
+        $(document).bind("contextmenu",function(e) {
+            e.preventDefault();
+
+        });
+
+
+</script>-->
+
+
+
+  <!-- screen slider php devlopment page on clik screen -->
+        <script type="text/javascript">
+            $("#screen_slider").owlCarousel({
+                loop: !1,
+                margin: 0,
+                nav: !1,
+                items: 1,
+                startPosition: 0
+            }), $(".screenshots .screenshot").click(function () {
+                $("#screen_slider").trigger("to.owl.carousel", $(this).data("screen"))
+            }), $("#screen_slider").on("changed.owl.carousel", function (e) {
+                var o = e.item.index;
+                $(".screenshots .screenshot").removeClass("active"), $(".screenshots .screenshot[data-screen=" + o + "]").addClass("active")
+            }),
+             $(window).resize(function () {
+                t()
+            })
+        </script>
+    <!-- screen slider -->
+
+<!--
+<script>
+
+    var i=0;
+    $('.collapse').each(function(){
+    i++;
+    var newID='asd'+i;
+    $(this).attr('id',newID);
+    $(this).val(i);
+    });
+</script>-->
+
+
+
+
+
+</body>
+
+
+</html>
+

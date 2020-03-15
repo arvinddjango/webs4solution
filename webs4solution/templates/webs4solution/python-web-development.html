@@ -1,0 +1,771 @@
+{%  extends 'webs4solution/base.html'%}
+{%load staticfiles%}
+{%block title_block%}Python Web Development Service {%endblock%}
+{% block body %}
+
+
+    <div role="main" class="main">
+
+        <section class="page-header page-header-dark page-header-text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb justify-content-start">
+                            <li><a href="/" title="home">Home</a></li>
+                            <li><a href="what-we-do" title="who we are">What We Do</a></li>
+                            <li class="active">Python Development Process</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-md-12">
+                        <h1>Python Development Process</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner  -->
+<section class="section pt-4 pb-4 section-text-overlay java-advantages">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-xl-5">
+                <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100">
+                    {%for pythondevcompany in python_dev_company%}
+                    <h1 class="font-weight-semibold text-5 mb-3 dark-blue-title">{{pythondevcompany.python_dev_title}}</h1>
+{% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="float-lg-right title-img pb-4">
+                    <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">
+                        <div class="pr-0 pr-lg-3 pl-xl-5">
+                            {%for pythondevcompany in python_dev_company%}
+                            <img src="{{pythondevcompany.python_dev_img.url}}" class="img-fluid" alt="php Development" title="php Development" data-plugin-float-element data-plugin-options="{'startPos': 'top', 'speed': 4, 'horizontal': true, 'transition': true}" />
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+                <div class="float-lg-left title-content">
+                     {%for pythondevcompany in python_dev_company%}
+                    <p class="mb-4 text-3 appear-animation dark-gray-text" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">{{pythondevcompany.python_dev_desc|linebreaks}}</p>
+                    {% endfor %}
+                        <div class="row m-0 green-check">
+
+                                        <div class="col-md-4 col-lg-6 pl-xl-0">
+                                            <ul class="lead list list-unstyled lead blue-tick">
+                                                <li class="mb-3 text-justify"><i class="fas fa-check ml-1 mr-1 pr-2 text-3"></i><span class="text-3 font-weight-semibold dark-gray-text">24/7 Support</span></li>
+                                                <li class="mb-3 text-justify"><i class="fas fa-check ml-1 mr-1 pr-2 text-3"></i><span class="text-3 font-weight-semibold dark-gray-text">20 Working Hours Free</span></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="col-md-4 col-lg-6">
+                                            <ul class="lead list list-unstyled lead blue-tick">
+                                                <li class="mb-3 text-justify"><i class="fas fa-check ml-1 mr-1 pr-2 text-3"></i><span class="text-3 font-weight-semibold dark-gray-text">Developer's Skill Test</span></li>
+                                                <li class="mb-3 text-justify"><i class="fas fa-check ml-1 mr-1 pr-2 text-3"></i><span class="text-3 font-weight-semibold dark-gray-text">Assured Delivery</span></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                        <div class="header-button d-sm-flex ml-0 mt-4">
+                            <a href="#hire-resource" data-hash data-hash-offset="140" rel="nofollow" title="Talk to an Expert!" class="btn btn-outline btn-rounded btn-primary btn-v-3 btn-h-4 font-weight-bold"> <span class="wrap"> <span>Talk to an Expert!</span>
+                                </span>
+                            </a>
+                       </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- banner and  -->
+
+    <div class="row justify-content-center">
+        <img src="{%static 'img/hr-middle.png'%}" alt="" >
+    </div>
+
+    <!-- enhance your business -->
+        <section class="section enhance-flutter">
+                    <div class="container">
+                        <div class="row text-center mt-4">
+                            <div class="col">
+                                <div class="overflow-hidden mb-xl-3">
+                                    <h2 class="font-weight-semibold text-5 mb-xl-3 dark-blue-title appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">Python Web Development Services</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6 text-center mx-auto my-4 mt-lg-5 mt-xl-4 appear-animation" data-appear-animation="fadeInRightShorter" data-appear-animation-delay="300">
+                                <div class="card bg-light-5 text-left border-0">
+                                <div class="card-body p-4">
+                                    {% for pythonservicedesc in python_service_desc %}
+                                    <p class="mb-2 mt-xl-5 mb-xl-5 text-3 dark-gray-text">{{pythonservicedesc.dev_service_python_desc}}</p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            </div>
+                            {% for pythonservice in python_service%}
+                            <div class="col-12 col-md-6 col-lg-3 mx-auto mt-lg-5 mt-xl-2 pt-xl-3 appear-animation" data-appear-animation="" data-appear-animation-delay="300">
+
+                                <div class="icon-box icon-box-style-4 mb-4 mb-lg-3 border pr-2 pr-xl-4 pl-0">
+                                    <div class="icon-box-icon pt-3 pb-3 pl-3 pr-3">
+                                        <img src="{{pythonservice.dev_servic_python_img.url}}" alt="">
+                                    </div>
+                                    <div class="icon-box-info pt-3 pb-0">
+                                        <div class="icon-box-info-title">
+                                            <h3 class="text-3 font-weight-semibold dark-gray-text">{{pythonservice.dev_service_python_title}} </h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </section>
+    <!-- end page -->
+
+    <div class="row justify-content-center">
+        <img src="{%static 'img/hr-middle.png'%}" alt="" >
+    </div>
+    <!-- brand slider -->
+
+    <section class="section bid-participation1 hero-offer java-click shadow-effect">
+            <div class="container">
+                <div class="row justify-content-center pb-4">
+                    <div class="col-lg-10 text-center">
+                        <div class="appear-animation" data-appear-animation="fadeInUpShorter">
+                            <h2 class="font-weight-bold dark-blue-title">Our Python solutions expertise </h2>
+                            <div class="overflow-hidden my-4">
+                                <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                            </div>
+                        </div>
+                        <p class="text-3 mt-3 dark-gray-text">As a well known Python website development company, we provide solutions that make the best out of the popular python framework</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    {% for pythonsolexpertise in python_sol_expertise%}
+                    <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-4">
+                            <div class=" card-style-2 card-style-3 border-0 appear-animation animated fadeInLeftShorter appear-animation-visible" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                                <div class="icon-view p-3 rounded">
+                                     <div><img width="55" src="{{pythonsolexpertise.sol_exper_python_img.url}}" alt="{{pythonsolexpertise.sol_exper_python_title}}"></div>
+                                    <h3 class="text-3 mt-5 dark-gray-text font-weight-semibold">{{pythonsolexpertise.sol_exper_python_title}} </h3>
+                                </div>
+                            </div>
+                    </div>
+                    {% endfor %}
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+         <div class="section py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="border border-left-0 border-right-0 border-bottom-0 d-flex align-items-center justify-content-center">
+                            <a class="position-absolute">
+                                <img src="{%static 'img/django/django-small-icon.png'%}" height="84" alt="" class="img-fluid bg-light px-4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- end slider -->
+
+    <!-- valu project -->
+        <!--<section class="section valu-project">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="font-weight-semibold text-5 dark-blue-title">How we Add Value?</h2>
+
+                    <p class="text-3 mt-3 dark-gray-text">Our in house team offers highly customized and business specific php development services ready to achieve your business goals. This is how we add value to every php custom web application development project! </p>
+                </div>
+            </div>
+            <div class="row">
+                {% for addvaluepython in add_value_python %}
+                 <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <article class="blog-post border py-3 pl-3 pr-3">
+                            <div class="image-frame hover-effect-2 text-center pt-2">
+
+                                    <img src="{{addvaluepython.add_value_python_img.url}}" class="img-fluid mb-3" alt="">
+                            </div>
+                            <div class="appear-animation animated text-left appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500" data-appear-animation-duration="700ms">
+                                <h3 class="font-weight-semibold link-color-dark dark-gray-text text-3 mb-1 pt-2">{{addvaluepython.add_value_python_title}}</h3>
+
+                            </div>
+                        <p class="appear-animation text-left text-2 dark-gray-text pt-2 animated appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" data-appear-animation-duration="700ms">{{addvaluepython.add_value_python_desc}} </p>
+                    </article>
+                </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </section>-->
+        <section class="section bid-participation valu-project">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="font-weight-semibold text-5 dark-blue-title">How we Add Value?</h2>
+
+                    <p class="text-3 mt-3 dark-gray-text">Our in house team offers highly customized and business specific php development services ready to achieve your business goals. This is how we add value to every php custom web application development project! </p>
+                </div>
+            </div>
+            <div class="row">
+                {% for addvaluephp in add_value_php %}
+                 <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+                    <article class="blog-post border py-3 pl-3 pr-3">
+                            <div class="image-frame hover-effect-2 text-center pt-2">
+
+                                    <img src="{{addvaluephp.add_value_php_img.url}}" class="img-fluid mb-3" alt="">
+                            </div>
+                            <div class="appear-animation animated text-left appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500" data-appear-animation-duration="700ms">
+                                <h3 class="font-weight-semibold link-color-dark dark-gray-text text-3 mb-1 pt-2">{{addvaluephp.add_value_php_title}}</h3>
+
+                            </div>
+                        <p class="appear-animation text-left text-2 dark-gray-text pt-2 animated appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" data-appear-animation-duration="700ms">{{addvaluephp.add_value_php_desc}} </p>
+                    </article>
+                </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </section>
+    <!-- end project -->
+
+    <!-- App dev -->
+    <!--<section id="screenshots" class="section valu-project screenshots spring-laptop-screenshot">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="font-weight-semibold text-5 dark-blue-title">Application Development Process</h2>
+
+                    <p class="text-3 mt-3 dark-gray-text">We adopt agile methodology and a test driven approach to every php development project we undertake. It ensures project transparency and a seamless web application to the clients. </p>
+                </div>
+            </div>
+           <div class="screenshots_row row">
+
+              <div class="col-md-12 col-lg-6 col-xl-6">
+                <div class="row">
+                    {% for pythondevprocess in python_dev_process%}
+                    <div class="col-6 col-md-3 col-lg-3 mb-3 pr-2 pl-2">
+                        <div class="screenshot active border" data-screen="{{forloop.counter0}}">
+                            <img src="{{pythondevprocess.dev_python_img.url}}" height="40" width="40" alt="{{pythondevprocess.dev_django_title}}">
+                            <h3 class="text-2 dark-gray-text dark-gray-text">{{pythondevprocess.dev_python_title}}</h3>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+               </div>
+
+              <div class="col-md-12 col-lg-6 col-xl-6 d-sm-block d-none">
+                <div class="iphone spring_screenshot">
+                    <div class="iphone_x">
+                        <div id="screen_slider" class="screen_slider owl-carousel">
+                            {% for pythondevprocess in python_dev_process%}
+                            <div>
+                                <img src="{{pythondevprocess.dev_python_img_screen.url}}" alt="">
+                                <div class="content-slide">
+                                    <h3 class="text-2 font-weight-semibold text-color-primary mb-3">{{pythondevprocess.dev_python_title}}</h3>
+                                    <p class="text-2 dark-blue-title">{{pythondevprocess.dev_python_desc}}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+            </div>
+
+        </div>
+    </section>-->
+        <section id="screenshots" class="section bid-participation1 valu-project screenshots spring-laptop-screenshot">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col">
+                    <h2 class="font-weight-semibold text-5 dark-blue-title">Application Development Process</h2>
+                    <p class="text-3 mt-3 dark-gray-text">We adopt agile methodology and a test driven approach to every php development project we undertake. It ensures project transparency and a seamless web application to the clients. </p>
+                </div>
+            </div>
+           <div class="screenshots_row row">
+
+              <div class="col-md-12 col-lg-6 col-xl-6">
+                <div class="row">
+                    {% for phpdevprocess in php_dev_process%}
+                    <div class="col-6 col-md-3 col-lg-3 mb-3 pr-2 pl-2">
+                        <div class="screenshot active border" data-screen="{{forloop.counter0}}">
+                            <img src="{{phpdevprocess.dev_img.url}}" height="40" width="40" alt="{{phpdevprocess.dev_title}}">
+                            <h3 class="text-2 dark-gray-text dark-gray-text">{{phpdevprocess.dev_title}}</h3>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+               </div>
+
+              <div class="col-md-12 col-lg-6 col-xl-6 d-sm-block d-none">
+                <div class="iphone spring_screenshot">
+                    <div class="iphone_x">
+                        <div id="screen_slider" class="screen_slider owl-carousel">
+                            {% for phpdevprocess in php_dev_process%}
+                            <div>
+                                <img src="{{phpdevprocess.dev_img_screen.url}}" alt="">
+                                <div class="content-slide">
+                                    <h3 class="text-2 font-weight-semibold text-color-primary mb-3">{{phpdevprocess.dev_title}}</h3>
+                                    <p class="text-2 dark-blue-title">{{phpdevprocess.dev_desc}}</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- end app dev -->
+
+    <!-- App dev -->
+    <section class="page-header pt-4 pb-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <h2 class="mb-0 text-center text-5 font-weight-semibold dark-gray-text">Let’s build your PHP web app!</h2>
+                    <p class="text-3 mt-3 mb-1 dark-gray-text">Drop your Email ID and get a free 30 minutes consultation on web app development</p>
+                </div>
+            </div>
+            <!--subscribe form submit -->
+
+		<div class="row justify-content-center mt-3">
+			<form class="newsletter-form newsletter_form">
+				<div class="row justify-content-center">
+				<div class="col-md-3 col-xl-4 col-10 mb-4">
+				<div class="input-group bg-light rounded">
+			  		<input type="hidden" name="countryCode" id="newsletter_country_code">
+                    <input type="tel" value="" onkeypress="return isNumberKey(event)" class="form-control" name="cnumber" id="cnumber2" placeholder="Contact Number *">
+                    <span class="error" id="cnumber_error1">Please Enter Phone Number !</span>
+				</div>
+				</div>
+				<span class="mt-2 d-sm-block d-none">- or -</span>
+				<div class="col-md-3 col-xl-4 col-10 mb-4">
+					<div class="input-group bg-light rounded">
+					  	<input type="email" name= "email" class="newsletter-email form-control border-0 rounded" id="newsletter_email" placeholder="Enter Email address" aria-label="Enter Email address">
+					</div>
+				</div>
+				<div class="col-md-3 col-xl-2 col-12">
+                    <div class="header-button d-sm-flex ml-0 mt-0">
+                        <button type="submit" data-hash data-hash-offset="140" rel="nofollow" title="Let's Start!" class="btn btn-outline btn-rounded btn-primary btn-v-3 btn-h-4 font-weight-bold">
+                        	<span class="wrap"><span>Let's Start!</span></span>
+                        </button>
+                    </div>
+				</div>
+			</form>
+		</div>        </div>
+    </section>
+
+
+
+    <!-- sucess dev -->
+       <section class="section slide-phone-click">
+            <div class="container">
+                <div class="row text-center justify-content-center">
+                    <div class="col-11 col-md-12 col-lg-12">
+                        <div class="overflow-hidden mb-3">
+                            <h2 class="font-weight-semibold text-5 mb-0 appear-animation dark-blue-title" data-appear-animation="maskUp" data-appear-animation-delay="200">Our Success Stories </h2>
+                            <p class="text-3 mt-3 dark-gray-text">Here is a glimpse of some projects completed by our iOS app developers!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                        <div class="row appear-animation" data-appear-animation="fadeInRightShorter">
+                            <div class="col">
+                                <div class="owl-carousel owl-theme nav-style-3 nav-color-dark" data-plugin-options="{'items': 1, 'dots': true, 'nav': false, 'navtext': []}">
+                                   {% for projectlist in project_list%}
+                                    <div>
+                                        <div class="row align-items-center">
+
+                                            <div class="col-md-6 mr-auto pl-4">
+                                                <div class="testimonial testimonial-style-1">
+                                                    <div class="card mb-3 bg-light-5 text-left border-0">
+                                                        <div class="card-body p-4">
+                                                            <h3 class="font-weight-semibold dark-gray-text">{{projectlist.project_head}}</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card bg-light-5 text-left border-0">
+                                                        <div class="card-body p-4">
+                                                            <h3 class="font-weight-semibold dark-gray-text">{{projectlist.project_name}}</h3>
+                                                            <div class="mt-3">
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">{{projectlist.language_used1}}</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">{{projectlist.language_used2}}</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">{{projectlist.language_used3}}</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">{{projectlist.language_used4}}</span>
+                                                            </div>
+                                                            <p class=" mt-xl-3 text-3 mt-3 dark-gray-text">{{projectlist.project_desc1}} </p>
+                                                            <p class="mb-xl-3 text-3 dark-gray-text">{{projectlist.project_desc2}} </p>
+                                                            <div class="header-button d-sm-flex ml-0">
+                                                           <a href="{{projectlist.get_absolute_url}}" title="Read More" class="btn btn-outline btn-rounded btn-primary btn-v-3 btn-h-4 font-weight-bold appear-animation mt-3" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Read More</a>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4 mb-md-0 d-sm-block d-none">
+                                                <img src="{{projectlist.project_img.url}}" class="img-fluid" alt="" />
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+{% endfor %}
+                                   <!-- <div>
+                                        <div class="row align-items-center">
+
+                                            <div class="col-md-6 mr-auto pl-4">
+                                                <div class="testimonial testimonial-style-1">
+                                                    <div class="card mb-3 bg-light-5 text-left border-0">
+                                                        <div class="card-body p-4">
+                                                            <h3 class="font-weight-semibold dark-gray-text">Study on the Go</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card bg-light-5 text-left border-0">
+                                                        <div class="card-body p-4">
+                                                            <h3 class="font-weight-semibold dark-gray-text">School Management System </h3>
+                                                            <div class="mt-3">
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">Android</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">iOS</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">MySQL</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">Angular</span>
+                                                            </div>
+                                                            <p class=" mt-xl-3 text-3 mt-3 dark-gray-text">The client approached us with the intention to develop an educational portal that offers end to end integrated solutions related to the education domain.</p>
+                                                            <p class="mb-xl-3 text-3 dark-gray-text">The mobile application provided to the client had modules right from registration to attendance to calender management of the students.</p>
+                                                            <div class="header-button d-sm-flex ml-0">
+                                                           <a href="school-management-system.html" title="Read More" class="btn btn-outline btn-rounded btn-primary btn-v-3 btn-h-4 font-weight-bold appear-animation mt-3" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Read More</a>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4 mb-md-0 d-sm-block d-none">
+                                                <img src="{%static 'img/flutter-icon/case-study/school.png'%}" class="img-fluid" alt="" />
+                                            </div>
+                                             <div class="col-md-3 mb-4 mb-md-0 d-sm-block d-none">
+                                                <img src="img/flutter-icon/sucsess-dev-1.png" class="img-fluid" alt="" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div>
+                                        <div class="row align-items-center">
+
+                                            <div class="col-md-6 mr-auto pl-4">
+                                                <div class="testimonial testimonial-style-1">
+                                                    <div class="card mb-3 bg-light-5 text-left border-0">
+                                                        <div class="card-body p-4">
+                                                            <h3 class="font-weight-semibold dark-gray-text">Click and Shop</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card bg-light-5 text-left border-0">
+                                                        <div class="card-body p-4">
+                                                            <h3 class="font-weight-semibold dark-gray-text">Ecommerce Mobile App</h3>
+                                                            <div class="mt-3">
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">Android</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">iOS</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">MySQL</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">Angular</span>
+                                                            </div>
+                                                            <p class=" mt-xl-3 text-3 mt-3 dark-gray-text">The main objective of client was to make life easier for the end user in their current busy schedule by providing the convenience of shopping at their fingertips. </p>
+                                                            <p class="mb-xl-3 text-3 dark-gray-text">We came up with a comprehensive delivery platform and a user centric app was developed with the help of custom functionalities. </p>
+                                                            <div class="header-button d-sm-flex ml-0">
+                                                           <a href="clickandshop.html" title="Read More" class="btn btn-outline btn-rounded btn-primary btn-v-3 btn-h-4 font-weight-bold appear-animation mt-3" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Read More</a>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4 mb-md-0 d-sm-block d-none">
+                                                <img src="{%static 'img/flutter-icon/case-study/shop.png'%}" class="img-fluid" alt="" />
+                                            </div>
+                                            <div class="col-md-3 mb-4 mb-md-0 d-sm-block d-none">
+                                                <img src="img/flutter-icon/sucsess-dev-1.png" class="img-fluid" alt="" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div>
+                                        <div class="row align-items-center">
+
+                                            <div class="col-md-6 mr-auto pl-4">
+                                                <div class="testimonial testimonial-style-1">
+                                                    <div class="card mb-3 bg-light-5 text-left border-0">
+                                                        <div class="card-body p-4">
+                                                            <h3 class="font-weight-semibold dark-gray-text">Packers and Movers on Demand</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card bg-light-5 text-left border-0">
+                                                        <div class="card-body p-4">
+                                                            <h3 class="font-weight-semibold dark-gray-text">Packers &amp; Movers Mobile App</h3>
+                                                            <div class="mt-3">
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">Android</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">iOS</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">MySQL</span>
+                                                            <span class="text-3 font-weight-semibold dark-gray-text py-1 pr-2 pl-2 mr-2">Angular</span>
+                                                            </div>
+                                                            <p class=" mt-xl-3 text-3 mt-3 dark-gray-text">To provide an on-demand moving and delivery app that helps the customers to move almost everything at their comfort. </p>
+                                                            <p class="mb-xl-3 text-3 dark-gray-text">The challenge was to allow notifications from the driver’s end. Our developers implemented custom validation to enable notifications. For a customized menu, we made use of Android Reside Menu.</p>
+                                                            <div class="header-button d-sm-flex ml-0">
+                                                           <a href="packers-on-the-go.html" title="Read More" class="btn btn-outline btn-rounded btn-primary btn-v-3 btn-h-4 font-weight-bold appear-animation mt-3" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700">Read More</a>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-4 mb-md-0 d-sm-block d-none">
+                                                <img src="{%static 'img/flutter-icon/case-study/packers.png'%}" class="img-fluid" alt="" />
+                                            </div>
+                                             <div class="col-md-3 mb-4 mb-md-0 d-sm-block d-none">
+                                                <img src="img/flutter-icon/sucsess-dev-1.png" class="img-fluid" alt="" />
+                                            </div>
+                                        </div>
+
+                                    </div>-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        </section>
+    <!-- end dev -->
+
+    <!-- get start -->
+        <section class="section get-start">
+                    <div class="container">
+                        <div class="row text-center mt-4">
+                            <div class="col">
+                                {% for startpython in start_python %}
+                                <div class="overflow-hidden mb-0">
+                                    <h2 class="font-weight-semibold text-5 mb-3 dark-blue-title appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="200">{{startpython.python_title}}</h2>
+                                    <p class="text-3 mt-3 mb-4 dark-gray-text">{{startpython.python_desc}} </p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 col-lg-12 mx-auto appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="300">
+                                {% for startpython in start_python %}
+                                <div class="row">
+
+                                    <div class="col-6 col-md-3 col-lg-3 mt-2">
+                                        <div class="ic-start">
+                                            <img src="{{startpython.python_img1.url}}" height="40" width="40" alt="">
+                                        </div>
+                                         <h3 class="text-2 mt-3 dark-gray-text text-center dark-gray-text">{{startpython.python_img_title1}}</h3>
+                                    </div>
+                                      <div class="col-6 col-md-3 col-lg-3 mt-2">
+                                        <div class="ic-start">
+                                            <img src="{{startpython.python_img2.url}}" height="40" width="40" alt="">
+                                        </div>
+                                         <h3 class="text-2 mt-3 dark-gray-text text-center dark-gray-text">{{startpython.python_img_title2}}</h3>
+                                    </div>
+                                      <div class="col-6 col-md-3 col-lg-3 mt-2">
+                                        <div class="ic-start">
+                                            <img src="{{startpython.python_img3.url}}" height="40" width="40" alt="">
+                                        </div>
+                                         <h3 class="text-2 mt-3 dark-gray-text text-center dark-gray-text">{{startpython.python_img_title3}}</h3>
+                                    </div>
+                                      <div class="col-6 col-md-3 col-lg-3 mt-2">
+                                        <div class="ic-start">
+                                            <img src="{{startpython.python_img4.url}}" height="40" width="40" alt="">
+                                        </div>
+                                         <h3 class="text-2 mt-3 dark-gray-text text-center dark-gray-text">{{startpython.python_img_title4}}</h3>
+                                    </div>
+                                   <!-- <div class="col-6 col-md-3 col-lg-3 mt-2">
+                                        <div class="ic-start">
+                                            <img src="{%static 'img/flutter-icon/share-your-requirement.svg'%}" alt="">
+                                        </div>
+                                         <h3 class="text-2 mt-3 dark-gray-text text-center dark-gray-text">Share your requirement</h3>
+                                    </div>
+                                    <div class="col-6 col-md-3 col-lg-3 mt-2">
+                                        <div class="ic-start">
+                                            <img src="{%static 'img/flutter-icon/estimation-within-24-hrs.svg'%}" alt="">
+                                        </div>
+                                         <h3 class="text-2 mt-3 dark-gray-text text-center dark-gray-text">Get estimation in 24 hrs</h3>
+                                    </div>
+                                    <div class="col-6 col-md-3 col-lg-3 mt-2">
+                                        <div class="ic-start">
+                                            <img src="{%static 'img/flutter-icon/strart.svg'%}" alt="">
+                                        </div>
+                                         <h3 class="text-2 mt-3 dark-gray-text text-center dark-gray-text">Kickstart project in a day</h3>
+                                    </div>-->
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="header-button d-sm-flex ml-0 mt-4">
+                                <a href="#hire-resource" data-hash data-hash-offset="140" rel="nofollow"title="Get estimation now!" class="btn btn-outline btn-rounded btn-primary btn-v-3 btn-h-4 font-weight-bold">
+                                    <span class="wrap">
+                                        <span>Get estimation now!</span>
+                                    </span>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+    <!-- end page -->
+
+
+    <section class="section bid-participation1 pb-0 blog_section">
+            <div class="container">
+                <div class="row text-center justify-content-center">
+                    <div class="col-11 col-md-12 col-lg-12">
+                        <div class="overflow-hidden mb-3">
+                            <h2 class="font-weight-semibold mb-0 text-5 appear-animation dark-blue-title" data-appear-animation="maskUp" data-appear-animation-delay="200">Recent Blogs</h2>
+                        </div>
+                        <div class="overflow-hidden mb-5">
+                            <p class="mb-0 appear-animation text-3 dark-gray-text" data-appear-animation="maskUp" data-appear-animation-delay="400">Have a look at what’s new and happening at Webs4solution - latest technology blogs and more! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-10 col-sm-8 col-md-12 overflow-hidden p-0 blog_content">
+                        <div class="owl-carousel carousel-center-active-items carousel-center-active-items-style-2 dots-style-3 mb-0" data-plugin-carousel data-plugin-options="{'autoplay': true, 'dots': true, 'nav': false, 'loop': true, 'margin': 40, 'responsive':{'0':{'items': 1}, '576':{'items': 1}, '767':{'items': 3}, '991':{'items': 4}, '1199':{'items': 5}}}">
+                           {% for bloglist in blog_list|slice:":10" %}
+                            <div>
+                                <article class="card bg-light rounded border-0 appear-animation" data-appear-animation="fadeInScale" data-appear-animation-duration="500ms" data-appear-animation-delay="600">
+                                    <div class="card-body p-3">
+                                        <h3 class="font-weight-semibold text-4 mb-1"><a href="why-to-choose-spring-boot-over-spring-framework.html" title="why to choose spring boot over spring framework" class="link-color-dark dark-gray-text">{{bloglist.blog_title|truncatewords:10}}</a></h3>
+                                        <p class="mt-3"> <i class="far fa-clock mt-1 text-color-primary"></i>
+                                            <time class="font-tertiary text-1" datetime="Sept 26, 2018">{{bloglist.blog_created_date}}</time>
+                                        </p>
+                                        <p class="blog-text text-3 dark-gray-text mb-2"><a href="why-to-choose-spring-boot-over-spring-framework.html" title="why to choose spring boot over spring framework" class="text-color-dark d-block">{{bloglist.blog_desc|truncatewords:20}}</a>
+                                        </p> <a href="{{bloglist.get_absolute_url}}" title="read more" class="text-color-primary font-weight-bold learn-more">READ MORE <i class="fas fa-angle-right text-3" aria-label="Read more"></i></a>
+                                        <p class="text-color-dark font-weight-semibold mb-0 mt-3">
+                                            <img src="{%static 'img/authors/web-application-development-manav-patel.jpg'%}" class="img-fluid img-thumbnail-small rounded-circle d-inline-block mr-2" width="25" height="25" alt="blog author - webs4solution" />by {{bloglist.author|title}}</p>
+                                    </div>
+                                </article>
+                            </div>
+ {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+            <!-- FAQ -->
+        <section class="section accordian-click">
+            <div class="container">
+                <div class="row text-center justify-content-center">
+                    <div class="col-11 col-md-9 col-lg-7">
+                        <div class="overflow-hidden mb-3">
+                            <h2 class="font-weight-semibold mb-0 text-5 appear-animation dark-blue-title" data-appear-animation="maskUp" data-appear-animation-delay="200">Frequently Asked Questions</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            <div class="col-md-12 col-lg-12 mb-5 mt-4 mb-md-0">
+                <div class="row">
+                    <div class="col">
+                        {% for faqlist in python_faq_list %}
+                        <div id="toggleDefault" class="accordion accordion-minimal accordion-toggle" role="tablist">
+
+                            <div class="card">
+                                <div class="card-header accordion-header" role="tab" id="toggleMinimalFaq1">
+                                    <h5 class="mb-0">
+                                        <a href="#" class="text-3 font-weight-semibold dark-gray-text" data-toggle="collapse" data-target="#toggleMinimalCollapseFaq1" aria-expanded="false" aria-controls="toggleMinimalCollapseFaq1">{{faqlist.question1}}</a>
+                                    </h5>
+                                </div>
+                                <div id="toggleMinimalCollapseFaq1" class="collapse show" role="tabpanel" aria-labelledby="toggleMinimalFaq1">
+                                    <div class="card-body">
+                                        <p class="mb-0 ml-xl-5 text-3 dark-gray-text">{{faqlist.answer1}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header accordion-header" role="tab" id="toggleMinimalFaq2">
+                                    <h5 class="mb-0">
+                                        <a href="#" class="collapsed text-3 font-weight-semibold dark-gray-text" data-toggle="collapse" data-target="#toggleMinimalCollapseFaq2" aria-expanded="false" aria-controls="toggleMinimalCollapseFaq2">{{faqlist.question2}}</a>
+                                    </h5>
+                                </div>
+                                <div id="toggleMinimalCollapseFaq2" class="collapse" role="tabpanel" aria-labelledby="toggleMinimalFaq2">
+                                    <div class="card-body">
+                                        <p class="mb-0 ml-xl-5 text-3 dark-gray-text">{{faqlist.answer2}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header accordion-header" role="tab" id="toggleMinimalFaq3">
+                                    <h5 class="mb-0">
+                                        <a href="#" class="collapsed text-3 font-weight-semibold dark-gray-text" data-toggle="collapse" data-target="#toggleMinimalCollapseFaq3" aria-expanded="false" aria-controls="toggleMinimalCollapseFaq3">{{faqlist.question3}} </a>
+                                    </h5>
+                                </div>
+                                <div id="toggleMinimalCollapseFaq3" class="collapse" role="tabpanel" aria-labelledby="toggleMinimalFaq3">
+                                    <div class="card-body">
+                                        <p class="mb-0 ml-xl-5 text-3 dark-gray-text">{{faqlist.answer3}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header accordion-header" role="tab" id="toggleMinimalFaq4">
+                                    <h5 class="mb-0">
+                                        <a href="#" class="collapsed text-3 font-weight-semibold dark-gray-text" data-toggle="collapse" data-target="#toggleMinimalCollapseFaq4" aria-expanded="false" aria-controls="toggleMinimalCollapseFaq4">{{faqlist.question4}}</a>
+                                    </h5>
+                                </div>
+                                <div id="toggleMinimalCollapseFaq4" class="collapse" role="tabpanel" aria-labelledby="toggleMinimalFaq4">
+                                    <div class="card-body">
+                                        <p class="mb-0 ml-xl-5 text-3 dark-gray-text">{{faqlist.answer4}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- end faq -->
+
+
+
+
+
+    </div>
+
+
+{% endblock %}

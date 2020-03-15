@@ -1,0 +1,138 @@
+{%  extends 'webs4solution/base.html'%}
+{%load staticfiles%}
+{%block title_block%}Career Page{%endblock%}
+{% block body %}
+
+
+    <div role="main" class="main">
+
+                <section class="page-header page-header-dark page-header-text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb justify-content-start">
+                            <li><a href="/" title="home">Home</a></li>
+                            <li><a href="who-we-are" title="who we are">Who We Are</a></li>
+                            <li class="active">Career</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-md-12">
+                        <h1>Career with webs4solution</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bid-participation1 hero-offer java-click">
+            <div class="container">
+                <div class="row justify-content-center pb-0">
+                    <div class="col-lg-10 text-center">
+                        {% for career in career_list%}
+                        <div class="appear-animation" data-appear-animation="fadeInUpShorter">
+                            <span class="top-sub-title text-color-primary">{{career.career_title}}</span>
+                            <h1 class="font-weight-bold dark-blue-title">{{career.carrer_heading}}</h1>
+                            <div class="overflow-hidden my-4">
+                                <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container pb-5">
+                {% for career in career_list%}
+                <div class="row justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-5 col-xl-6 mr-sm-auto pb-5 mb-5 pb-md-0 mb-md-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400">
+                        <div class="bg-primary position-relative mx-auto" data-plugin-float-element data-plugin-options="{'startPos': 'none', 'speed': 10, 'transition': true, 'style': 'max-width: 250px;'}">
+                            <div class="rect-size"></div> <img src="{{career.carrer_img.url}}" class="position-absolute" alt="career image" data-plugin-float-element data-plugin-options="{'startPos': 'none', 'speed': 9, 'horizontal': true, 'transition': true, 'style': 'top: 60px; right: -40%; width: 120%;'}"
+                            /> <img src="{{career.carrer_img1.url}}" class="position-absolute" alt="career image" data-plugin-float-element data-plugin-options="{'startPos': 'none', 'speed': 8.5, 'transition': true, 'style': 'bottom: -40px; left: -40%; width: 160%;'}"
+                            /></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="100"> <span class="top-sub-title text-color-primary text-uppercase">{{career.career_title1}}</span>
+                            <h2 class="font-weight-bold text-6 mb-3 dark-blue-title">{{career.carrer_heading1}}</h2>
+                            <div class="overflow-hidden my-4">
+                                <hr class="divider-w-2 divider-size-2 hr-orange-border margin0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                            </div>
+                        </div>
+                        <p class="mb-3 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="500">{{career.carrer_desc|linebreaks}}</p>
+                        <a href="#hire-resource" data-hash data-hash-offset="140" title="contact us"
+                            class="btn btn-outline btn-rounded btn-primary btn-v-3 btn-h-4 font-weight-bold text-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1000">CONTACT US</a></div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section id="jobs" class="section bid-participation">
+            <div class="container">
+                <div class="row mb-3">
+                    {% for career in career_list%}
+                    <div class="col">
+                        <div class="overflow-hidden"> <span class="d-block top-sub-title text-color-primary appear-animation text-uppercase" data-appear-animation="maskUp">{{career.career_title2}}</span></div>
+                        <div class="overflow-hidden mb-2">
+                            <h2 class="font-weight-bold mb-0 appear-animation dark-blue-title" data-appear-animation="maskUp" data-appear-animation-delay="200">{{career.carrer_heading2}}</h2>
+                            <div class="overflow-hidden my-4">
+                                <hr class="divider-w-2 divider-size-2 hr-orange-border margin0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                            </div>
+                        </div>
+                        <div class="overflow-hidden mb-3">
+                            <p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">{{career.carrer_desc1}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div id="currentOpenings" class="accordion accordion-style-2 accordion-toggle" role="tablist">
+                            {% for joblist in job_list%}
+                            <div class="card appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+                                <div class="card-header accordion-header career-accordion" role="tab" id="currentOpenings1">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8 mb-4 mb-md-0">
+                                            <h3 class="font-weight-bold text-4">{{joblist.technology_language}}</h3>
+                                            <p class="mb-4">{{joblist.job_desc}}</p>
+                                            <ul
+                                                class="list list-inline mb-0">
+                                                <li class="list-inline-item"> <strong>LOCATION:</strong> {{joblist.job_location}}</li>
+                                                <li class="list-inline-item ml-md-3"> <strong>QUALIFICATION:</strong> {{joblist.job_qulification}}</li>
+                                                </ul>
+                                                <ul class="list list-inline mb-0">
+                                                    <li class="list-inline-item"> <strong>EXPERIENCE:</strong> {{joblist.job_experience}}</li>
+                                                </ul>
+                                        </div>
+                                        <div class="col-md-4 text-right"> <a href="javascript:void(0);" title="more detail" class="btn btn-primary btn-rounded btn-v-3 btn-h-3 font-weight-bold collapsed" data-toggle="collapse" data-target="#{{forloop.counter0}}" aria-expanded="false"
+                                                aria-controls="currentOpeningsCollapse1"> <span class="title">MORE DETAILS</span> <i class="lnr lnr-cross"></i> </a></div>
+                                    </div>
+                                </div>
+                                <div id="{{forloop.counter0}}" class="collapse" role="tabpanel" aria-labelledby="currentOpenings1">
+                                    <div class="card-body">
+                                        <h4 class="font-secondary font-weight-bold text-color-default text-2">JOB DESCRIPTION</h4>
+                                        <ul class="lead list list-unstyled">
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about1}}</li>
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about2}}</li>
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about3}}</li>
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about4}}</li>
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about5}}</li>
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about6}}</li>
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about7}}</li>
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about8}}</li>
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about9}}</li>
+                                            <li class="mb-2"><i class="fas fa-angle-right ml-1 mr-1 pr-2"></i>{{joblist.job_about10}}</li>
+                                        </ul>
+                                        <!--<a href="apply-job-form.html" title="apply for job" class="btn btn-primary btn-rounded btn-v-3 btn-h-2 font-weight-bold text-0">APPLY FOR THIS JOB</a> <a href="reference-form.html" title="refer a friend"
+                                            class="btn btn-dark btn-rounded btn-outline btn-v-3 btn-h-2 font-weight-bold ml-3 text-0">REFER A FRIEND</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+     {% endblock%}

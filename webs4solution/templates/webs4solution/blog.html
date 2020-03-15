@@ -1,0 +1,79 @@
+{%  extends 'webs4solution/base.html'%}
+{%load staticfiles%}
+{%block title_block%}Webs4solution Blog Page{%endblock%}
+{% block body %}
+
+
+    <div role="main" class="main">
+        <section class="page-header page-header-dark page-header-text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb justify-content-start">
+                            <li><a href="/" title="home">Home</a></li>
+                            <li class="active">Blog</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-md-12">
+                        <h1>Our Latest Blog</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section hero-offer java-click">
+            <div class="container">
+                <div class="row justify-content-center pb-0">
+                    <div class="col-lg-10 text-center">
+                        <div class="appear-animation" data-appear-animation="fadeInUpShorter">
+                            
+                            <h1 class="font-weight-bold dark-blue-title">Blogs For Web & Many More Technologies </h1>
+                            <div class="overflow-hidden my-4">
+                                <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                            </div>
+                        </div>
+                        <p class="text-3 mt-3 dark-gray-text">Thoughts, Ideas and Opinions of people at Webs4solution on everything trending in Web and many more technologies!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section bid-participation pb-0 pt-0 blog-card">
+            <div class="container">
+                <div class="row masonry-loader masonry-loader-showing portfolio-list portfolio-list-style-2" data-plugin-masonry data-plugin-options="{'itemSelector': '.isotope-item'}">
+
+                    {% for bloglist in blog_list %}
+                    <div class="col-sm-12 col-md-6 col-lg-4 isotope-item mb-5 p-0">
+                        <div class="portfolio-item rounded">
+                            <article class="blog-post">
+                                <div class="image-frame hover-effect-2">
+                                    <div class="image-frame-wrapper"> 
+                                        <a href="{{bloglist.get_absolute_url}}" title="{{bloglist.blog_title|truncatewords:10}}">
+                                            <img src="{{bloglist.blog_img.url}}" class="img-fluid" alt="{{bloglist.blog_title|truncatewords:5}}"/>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="blog-content">
+                                    <h2 class="font-weight-bold text-4 mb-0 mt-3 blog-title-height"> 
+                                        <a href="{{bloglist.get_absolute_url}}" title="{{bloglist.blog_title|truncatewords:10}}" class="dark-blue-title">{{bloglist.blog_title|truncatewords:10}}</a>
+                                    </h2>
+                                    <span class="top-sub-title text-color-primary text-2">{{bloglist.blog_created_date}}</span>
+                                    <p class="text-color-light-3 mt-2">{{bloglist.blog_desc|truncatewords:20}}</p>
+                                    <a href="{{bloglist.get_absolute_url}}" title="Read More" class="text-color-primary font-weight-bold learn-more">READ MORE <i class="fas fa-angle-right text-3" aria-label="Read more"></i></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+{% endfor %}
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+      <!-- footer make -->
+
+{% endblock %}

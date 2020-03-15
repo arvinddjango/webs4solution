@@ -1,0 +1,305 @@
+{%  extends 'webs4solution/base.html'%}
+{%load staticfiles%}
+{%block title_block%}Packages & Plan {%endblock%}
+{% block body %}
+
+<div role="main" class="main">
+
+
+        <section class="section">
+	    <div class="container mb-lg-5">
+	        <div class="row mb-4 text-center">
+	            <div class="col">
+	                <div class="overflow-hidden mb-2">
+						{% for package_headings in package_heading%}
+                        <p> {{package_headings.pack_desc}}</p>
+	                    <h2 class="font-weight-bold mb-0 appear-animation dark-blue-title" data-appear-animation="maskUp" data-appear-animation-delay="200">{{package_headings.pack_title}}</h2>
+						{% endfor %}
+	                    <div class="overflow-hidden my-4">
+                            <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                        </div>
+	                </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+	    <section class="section">
+	    <div class="container mb-lg-5">
+	        <div class="row mb-4 text-center">
+				{% for gem_package_heads in gem_package_head %}
+	            <div class="col">
+	                <div class="overflow-hidden mb-2">
+	                    <h2 class="font-weight-bold mb-0 appear-animation dark-blue-title" data-appear-animation="maskUp" data-appear-animation-delay="200">{{gem_package_heads.gem_head}}</h2>
+	                    <div class="overflow-hidden my-4">
+                            <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                        </div>
+	                </div>
+	                <div class="overflow-hidden mb-3">
+						<p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">{{gem_package_heads.gem_title}}</p>
+					</div>
+	            </div>
+				{% endfor %}
+	        </div>
+	        <div class="row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+	            <div class="col p-1">
+	                <div class="owl-carousel owl-theme nav-style-3 footer_address" data-plugin-options="{'loop': false, 'autoplay': true, 'items': 4, 'nav': false, 'dots': true, 'margin': 8, 'autoplayHoverPause': true}">
+						{% for gem_packages in gem_package %}
+	                    <div class="text-center">
+	                        <div class="image-frame image-frame-style-1 image-frame-effect-2 mb-3">
+	                            <div class="card card-style-5 bg-light-5 rounded border-0 p-3">
+	                                <div class="card-body p-4">
+	                                    <h3 class="font-weight-bold text-4">{{gem_packages.gem_package_title}}</h3>
+                                        <h2> &#8377; {{gem_packages.gem_package_price}}/-</h2>
+                                        <ul class="lead list list-unstyled green-tick">
+                                            <li><i class="fas fa-check"></i> <b>{{gem_packages.gem_package_title_list1}}</b></li>
+											<li><i class="fas fa-check"></i> <b>{{gem_packages.gem_package_title_list2}}</b></li>
+											<li><i class="fas fa-check"></i> <b>{{gem_packages.gem_package_title_list3}}</b></li>
+											<li><i class="fas fa-check"></i> <b>{{gem_packages.gem_package_title_list4}}</b></li>
+											<li><i class="fas fa-check"></i> <b>{{gem_packages.gem_package_title_list5}}</b></li>
+
+
+						</ul>
+                                        	  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+  Get Free Quote</button>	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+						{% endfor %}
+
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+    	    <section class="section">
+	    <div class="container mb-lg-5">
+	        <div class="row mb-4 text-center">
+				{% for web_package_heads in web_package_head %}
+	            <div class="col">
+	                <div class="overflow-hidden mb-2">
+	                    <h2 class="font-weight-bold mb-0 appear-animation dark-blue-title" data-appear-animation="maskUp" data-appear-animation-delay="200">{{web_package_heads.web_head}}</h2>
+	                    <div class="overflow-hidden my-4">
+                            <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                        </div>
+	                </div>
+	                <div class="overflow-hidden mb-3">
+						<p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">{{web_package_heads.web_title}}</p>
+					</div>
+	            </div>
+				{% endfor %}
+	        </div>
+	        <div class="row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+	            <div class="col p-1">
+	                <div class="owl-carousel owl-theme nav-style-3 footer_address" data-plugin-options="{'loop': false, 'autoplay': true, 'items': 4, 'nav': false, 'dots': true, 'margin': 8, 'autoplayHoverPause': true}">
+						{% for web_packages in web_package %}
+	                    <div class="text-center">
+	                        <div class="image-frame image-frame-style-1 image-frame-effect-2 mb-3">
+	                            <div class="card card-style-5 bg-light-5 rounded border-0 p-3">
+	                                <div class="card-body p-4">
+	                                    <h3 class="font-weight-bold text-4">{{web_packages.web_package_title}}</h3>
+                                        <h2> &#8377; {{web_packages.web_package_price}}/-</h2>
+                                        <ul class="lead list list-unstyled green-tick">
+                                            <li><i class="fas fa-check"></i> <b>{{web_packages.web_package_title_list1}}</b></li>
+											<li><i class="fas fa-check"></i> <b>{{web_packages.web_package_title_list2}}</b></li>
+											<li><i class="fas fa-check"></i> <b>{{web_packages.web_package_title_list3}}</b></li>
+											<li><i class="fas fa-check"></i> <b>{{web_packages.web_package_title_list4}}</b></li>
+											<li><i class="fas fa-check"></i> <b>{{web_packages.web_package_title_list5}}</b></li>
+
+						</ul>
+                                        	  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#webformModal">
+  Get Free Quote
+</button>	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+						{% endfor %}
+
+
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+    	    <section class="section">
+	    <div class="container mb-lg-5">
+	        <div class="row mb-4 text-center">
+				{% for tender_package_heads in tender_package_head %}
+	            <div class="col">
+	                <div class="overflow-hidden mb-2">
+	                    <h2 class="font-weight-bold mb-0 appear-animation dark-blue-title" data-appear-animation="maskUp" data-appear-animation-delay="200">{{tender_package_heads.tender_head}}</h2>
+	                    <div class="overflow-hidden my-4">
+                            <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                        </div>
+	                </div>
+	                <div class="overflow-hidden mb-3">
+						<p class="lead mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">{{tender_package_heads.tender_title}}</p>
+					</div>
+	            </div>
+				{% endfor %}
+	        </div>
+	        <div class="row appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600">
+	            <div class="col p-1">
+	                <div class="owl-carousel owl-theme nav-style-3 footer_address" data-plugin-options="{'loop': false, 'autoplay': true, 'items': 4, 'nav': false, 'dots': true, 'margin': 8, 'autoplayHoverPause': true}">
+						{% for tender_packages in tender_package %}
+	                    <div class="text-center">
+	                        <div class="image-frame image-frame-style-1 image-frame-effect-2 mb-3">
+	                            <div class="card card-style-5 bg-light-5 rounded border-0 p-3">
+	                                <div class="card-body p-4">
+	                                    <h3 class="font-weight-bold text-4">{{tender_packages.tender_package_title}}</h3>
+                                        <h2> &#8377; {{tender_packages.tender_package_price}}/-</h2>
+                                        <ul class="lead list list-unstyled green-tick">
+                                            <li><i class="fas fa-check"></i> <b>{{tender_packages.tender_package_title_list1}}</b></li>
+                                            <li><i class="fas fa-check"></i> <b>{{tender_packages.tender_package_title_list2}}</b></li>
+                                            <li><i class="fas fa-check"></i> <b>{{tender_packages.tender_package_title_list3}}</b></li>
+                                            <li><i class="fas fa-check"></i> <b>{{tender_packages.tender_package_title_list4}}</b></li>
+											<li><i class="fas fa-check"></i> <b>{{tender_packages.tender_package_title_list5}}</b></li>
+						</ul>
+                                        	  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+  Get Free Quote
+</button>	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+						{% endfor %}
+
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+
+</div>
+
+
+
+
+<!-- GeM Modal -->
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Bussiness With US</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+      </div>
+      <div class="modal-body">
+        <form>
+<div class="form-group row">
+		<label for="purpose" class="col-sm-2 col-form-label col-form-label-lg">Purpose</label>
+		<div class="col-sm-10">
+		<select data-plugin-selectTwo class="form-control populate" id="purpose">
+		<option value="S">--SELECT--</option>
+		<option value="basic">BASIC</option>
+		<option value="standard">STANDARD</option>
+		<option value="advance">ADVANCE</option>
+		<option value="premium">PREMIUM</option>
+
+				</select>
+				</div>
+				</div>
+            <div class="form-group row">
+				  <label for="name" class="col-sm-2 col-form-label col-form-label-lg">Name</label>
+				<div class="col-sm-10">
+				<input type="text" name="name" id="name" class="form-control" placeholder="Type your name..." required/>
+				</div>
+				</div>
+
+
+  <div class="form-group row">
+    <label for="email" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control form-control-lg" id="email" placeholder="Type your Email id">
+    </div>
+  </div>
+             <div class="form-group row">
+    <label for="phone" class="col-sm-2 col-form-label col-form-label-lg">Mobile</label>
+    <div class="col-sm-10">
+      <input type="mobile" class="form-control form-control-lg" id="phone" placeholder="Type your Mobile">
+    </div>
+  </div>
+                <div class="form-group row">
+    <label for="message" class="col-sm-2 col-form-label col-form-label-lg">Message</label>
+    <div class="col-sm-10">
+      <textarea rows="5" class="form-control" name="message" id="message" placeholder="Type your message..." required></textarea>
+    </div>
+  </div>
+              <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+</form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Web Devlopment Modal -->
+<div class="modal fade" id="webformModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h4 class="modal-title" id="webModalLabel">Bussiness With US Web Devlopment</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+      </div>
+      <div class="modal-body">
+        <form>
+<div class="form-group row">
+		<label for="purposeweb" class="col-sm-2 col-form-label col-form-label-lg">Package</label>
+		<div class="col-sm-10">
+		<select data-plugin-selectTwo class="form-control populate" id="purposeweb">
+		<option value="S">--SELECT--</option>
+		<option value="basic">BASIC</option>
+		<option value="standard">STANDARD</option>
+		<option value="dynamic">DYNAMIC</option>
+		<option value="ecommerce">ECOMMERCE</option>
+
+				</select>
+				</div>
+				</div>
+            <div class="form-group row">
+				  <label for="name" class="col-sm-2 col-form-label col-form-label-lg">Name</label>
+				<div class="col-sm-10">
+				<input type="text" name="name" id="name1" class="form-control" placeholder="Type your name..." required/>
+				</div>
+				</div>
+
+
+  <div class="form-group row">
+    <label for="email" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control form-control-lg" id="email1" placeholder="Type your Email id">
+    </div>
+  </div>
+             <div class="form-group row">
+    <label for="phone" class="col-sm-2 col-form-label col-form-label-lg">Mobile</label>
+    <div class="col-sm-10">
+      <input type="mobile" class="form-control form-control-lg" id="phone1" placeholder="Type your Mobile">
+    </div>
+  </div>
+                <div class="form-group row">
+    <label for="message" class="col-sm-2 col-form-label col-form-label-lg">Message</label>
+    <div class="col-sm-10">
+      <textarea rows="5" class="form-control" name="message" id="message1" placeholder="Type your message..." required></textarea>
+    </div>
+  </div>
+              <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+</form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+ {% endblock %}

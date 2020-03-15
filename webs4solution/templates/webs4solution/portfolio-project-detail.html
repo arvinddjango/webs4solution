@@ -1,0 +1,115 @@
+{%  extends 'webs4solution/base.html'%}
+{%load staticfiles%}
+{%block title_block%}{{portfolio_list_detail.project_name}} {%endblock%}
+{% block body %}
+
+    <div role="main" class="main">
+        <section class="page-header page-header-dark page-header-text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb justify-content-start">
+                            <li><a href="/" title="home">Home</a></li>
+                            <li><a href="portfolio" title="who we are">Portfolio</a></li>
+                            <li class="active">Our Work Details</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-md-12">
+                        <h1>Our Work || {{portfolio_list_detail.project_name}}</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section bid-participation hero-offer java-click">
+            <div class="container">
+                <div class="row justify-content-center pb-0">
+                    <div class="col-lg-10 text-center">
+                        <div class="appear-animation" data-appear-animation="fadeInUpShorter">
+                            <h1 class="font-weight-bold dark-blue-title">{{portfolio_list_detail.project_name}}</h1>
+                            <div class="overflow-hidden my-4">
+                                <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section bid-participation1 project_detail_slider pt-0">
+            <div class="container">
+                <div class="row mx-0">
+                    <div class="owl-carousel owl-theme dots-style-3 nav-style-3 mb-0" data-plugin-options="{'responsive': {'0': {'items': 1}, '576': {'items': 1}, '768': {'items': 2}, '979': {'items': 2}, '1199': {'items': 2}}, 'dots': true, 'nav': true, 'loop': false, 'margin': 10}">
+                        <div>
+                            <div class="image-frame"> <img src="{{portfolio_list_detail.project_img1.url}}" class="img-fluid" alt="big lion-kodytechnolab" /></div>
+                        </div>
+                        <div>
+                            <div class="image-frame"> <img src="{{portfolio_list_detail.project_img2.url}}" class="img-fluid" alt="big lion-kodytechnolab" /></div>
+                        </div>
+                        <div>
+                            <div class="image-frame"> <img src="{{portfolio_list_detail.project_img3.url}}" class="img-fluid" alt="big lion-kodytechnolab" /></div>
+                        </div>
+                        <div>
+                            <div class="image-frame"> <img src="{{portfolio_list_detail.project_img4.url}}" class="img-fluid" alt="big lion-kodytechnolab" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section bid-participation">
+            <div class="container">
+                <div class="row text-center pb-2 mb-4">
+                    <div class="col">
+                        <div class="overflow-hidden"> <span class="top-sub-title text-color-primary d-block appear-animation" data-appear-animation="maskUp">WE ARE USING THIS</span></div>
+                        <div class="overflow-hidden">
+                            <h2 class="font-weight-bold appear-animation blue_title" data-appear-animation="maskUp" data-appear-animation-delay="200">Services</h2>
+                            <div class="overflow-hidden my-4">
+                                <hr class="divider-w-2 divider-size-2 border-color-primary my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                            </div>
+                        </div>
+                        <div class="overflow-hidden">
+                            <p class="lead appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="300">{{portfolio_list_detail.project_desc1}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-9 col-sm-6 col-md-5 col-lg-4 col-xl-1-5 mb-4">
+                        <div class="card card-style-2 card-style-3 bg-light-5 border-0 text-center appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                            <div class="card-body p-4"> <i class="fab fa-php text-color-dark text-10"></i>
+                                <h3 class="font-weight-bold text-2 mt-2">{{portfolio_list_detail.language_used1}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9 col-sm-6 col-md-5 col-lg-4 col-xl-1-5 mb-4">
+                        <div class="card card-style-2 card-style-3 bg-light-5 border-0 text-center appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                            <div class="card-body p-4"> <i class="fab fa-html5 text-color-dark text-10"></i>
+                                <h3 class="font-weight-bold text-2 ws-nowrap mt-2">{{portfolio_list_detail.language_used2}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-9 col-sm-6 col-md-5 col-lg-4 col-xl-1-5 mb-4">
+                        <div class="card card-style-2 card-style-3 bg-light-5 border-0 text-center appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                            <div class="card-body p-4"> <i class="fab fa-python text-color-dark text-10"></i>
+                                <h3 class="font-weight-bold text-2 ws-nowrap mt-2">{{portfolio_list_detail.language_used3}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-9 col-sm-6 col-md-5 col-lg-4 col-xl-1-5 mb-4">
+                        <div class="card card-style-2 card-style-3 bg-light-5 border-0 text-center appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                            <div class="card-body p-4"> <i class="fab fa-css3 text-color-dark text-10"></i>
+                                <h3 class="font-weight-bold text-2 ws-nowrap mt-2">{{portfolio_list_detail.language_used4}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="col-9 col-sm-6 col-md-5 col-lg-4 col-xl-1-5 mb-4">
+                        <div class="card card-style-2 card-style-3 bg-light-5 border-0 text-center appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                            <div class="card-body p-4"> <i class="fab fa-html5 text-color-dark text-10"></i>
+                                <h3 class="font-weight-bold text-2 ws-nowrap mt-2">{{portfolio_list_detail.language_used5}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+      {% endblock %}

@@ -1,0 +1,83 @@
+{%  extends 'webs4solution/base.html'%}
+{%load staticfiles%}
+{%block title_block%}Development Process{%endblock%}
+{% block body %}
+
+
+    <div role="main" class="main">
+         <section class="page-header page-header-dark page-header-text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb justify-content-start">
+                            <li><a href="/" title="home">Home</a></li>
+                            <li><a href="who-we-are" title="who we are">Who We Are</a></li>
+                            <li class="active">Our Development Process</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-md-12">
+                        <h1>Our Development Process</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+         <section class="section hero-offer section-text-overlay java-click">
+            <span class="text-background font-primary font-weight-bold appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500">Our Process</span>
+            <div class="container">
+                <div class="row justify-content-center pb-0">
+                    <div class="col-lg-10 text-center">
+                        <div class="appear-animation" data-appear-animation="fadeInUpShorter">
+                            <h1 class="font-weight-bold dark-blue-title">Our Development Process</h1>
+                            <div class="overflow-hidden my-4">
+                                <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                            </div>
+                        </div>
+                     <p class="lead mb-4 appear-animation text-4" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">In software engineering, a software development process is the process of dividing software development work into distinct phases to improve design, product management, and project management. ... Most modern development processes can be vaguely described as agile.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+         <section class="section section-text-overlay bid-participation1">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-8 col-lg-7">
+                        <div class="overflow-hidden"> <span class="d-block top-sub-title text-color-primary appear-animation" data-appear-animation="maskUp">STEPS WE FOLLOW ALWAYS</span></div>
+                        <div class="overflow-hidden mb-2">
+                            <h2 class="font-weight-bold mb-0 appear-animation dark-blue-title" data-appear-animation="maskUp" data-appear-animation-delay="200">From Start to End</h2>
+                        </div>
+                        <div class="overflow-hidden my-4">
+                                <hr class="divider-w-2 divider-size-2 hr-orange-border my-0 appear-animation animated maskUp appear-animation-visible" data-appear-animation="maskUp" data-appear-animation-delay="200" style="animation-delay: 200ms;">
+                            </div>
+                        <div class="overflow-hidden mb-5">
+                            <p class="lead pb-xlg mb-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="400">At webs4solution, the development process reflects transparency, dynamic environment and personal approaches to cater the needs of the clients. We remain abreast of all the latest technological changes, to provide only the best to our clienteles.</p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="row">
+                     {% for devprocess in dev_process_list%}
+                    <div class="col-md-6 col-lg-4 mb-4 appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                        <div class="card border-0">
+                            <div class="card-body text-center p-2">
+                                <div class="image-frame mb-4"> <img height="150"width="150" src="{{devprocess.dev_image.url}}" alt="{{devprocess.dev_process}}"></div>
+                                <h3 class="font-weight-bold text-4 blue_title">{{devprocess.dev_process}}</h3>
+                                <p class="lead px-sm-5 px-md-0">{{devprocess.dev_desc}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+    </div>
+     {% endblock %}

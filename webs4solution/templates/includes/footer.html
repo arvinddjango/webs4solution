@@ -1,0 +1,274 @@
+   {%load staticfiles%}
+<!-- footer make -->
+    <section class="section  py-5" id="hire-resource">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 appear-animation form-index" data-appear-animation="fadeInRightShorter"
+                     data-appear-animation-delay="600">
+                    <div class="card-form pt-5 pb-4">
+                        <div class="p-4" style="padding-bottom: 0 !important;padding-top: 0 !important;">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="top-sub-title text-color-primary">Let's Connect</span>
+                                    <h2 class="text-color-dark text-5 font-weight-semibold mb-4">Get Free
+                                        Consultation Now!</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                     <form class="contact-form" method="POST">
+                                          {% csrf_token %}
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <input type="text" value="" class="form-control" name="first_name" id="first_name"
+                                                       placeholder="First Name *" required>
+                                                <span class="error" id="fname_error">Please Enter First Name !
+                                                            </span>
+                                                <span class="error"
+                                                      id="fname_error1">Please Enter Valid First Name !</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="text" value="" class="form-control" name="last_name" id="last_name"
+                                                       placeholder="Last Name">
+                                                <span class="error" id="lname_error">Please Enter Last Name !
+                                                            </span>
+                                                <span class="error"
+                                                      id="lname_error1">Please Enter Valid Last Name !</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-12">
+                                                <select class="form-control" id="service_name"
+                                                        name="service_name" placeholder="Select Service">
+                                                    <option value="">Select Service</option>
+                                                    <option value="Mobile App Development">Mobile App Development
+                                                    </option>
+                                                    <option value="Ios App Development Services">iPhone App
+                                                        Development
+                                                    </option>
+                                                    <option value="Android App Development">Android App Development
+                                                    </option>
+                                                    <option value="Hybrid App Development">Hybrid App Development
+                                                    </option>
+                                                    <option value="Phonegap App Development">PhoneGap App Development
+                                                    </option>
+                                                    <option value="Ionic App Development">Ionic App Development</option>
+                                                    <option value="Reactnative App Development">Reactnative App
+                                                        Development
+                                                    </option>
+                                                    <option value="Xamarin App Development">Xamarin App Development
+                                                    </option>
+                                                    <option value="Jquery App Development">Jquery App Development
+                                                    </option>
+                                                    <option value="Web Development Services">Web Development</option>
+                                                    <option value="Php Development">PHP Development</option>
+                                                    <option value="Node Js Development">Node.js Development</option>
+                                                    <option value="Laravel Development">Laravel Development</option>
+                                                    <option value="Codeigniter Development Services">Codeigniter
+                                                        Development Services
+                                                    </option>
+                                                    <option value="CakePHP Development">CakePHP Development</option>
+                                                    <option value="Angular Js Development">AngularJS Development
+                                                    </option>
+                                                    <option value="Java Development">Java Development</option>
+                                                    <option value="React Js Development">React.JS Development</option>
+                                                    <option value="Spring Web Development">Spring Web Development
+                                                    </option>
+                                                    <option value="Ui Ux Design">Graphics &amp; UI/UX</option>
+                                                    <option value="Logo Design">Logo Design</option>
+                                                    <option value="Web Design">Web Design</option>
+                                                    <option value="Brochure Design">Brochure Design</option>
+                                                    <option value="UI Designing">UI Designing</option>
+                                                    <option value="Newsletter">Newsletter</option>
+                                                    <option value="Open Source">Open Source</option>
+                                                    <option value="Drupal Development">Drupal Development</option>
+                                                    <option value="Magento Development">Magento Development</option>
+                                                    <option value="Wordpress Development">WordPress Development</option>
+                                                    <option value="Joomla Development">Joomla Development</option>
+                                                    <option value="Woocommerce Development">Woocommerce Development
+                                                    </option>
+                                                    <option value="QA Testing">QA Testing</option>
+                                                    <option value="Mobile app Testing">Mobile app Testing</option>
+                                                    <option value="Automation Testing">Automation Testing</option>
+                                                    <option value="Other Services">Other Service</option>
+                                                </select>
+                                                <!-- <span class="error" id="service_error">Please Select One Service !
+                                                    </span>  -->
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <input type="email" value="" class="form-control" name="email_id"
+                                                       id="email_id" placeholder="E-mail *">
+                                                <span class="error" id="cemail_error">Please Enter Email !
+                                                            </span>
+                                                <span class="error" id="cemail_error1">Please Enter Valid Email !</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <input type="hidden" name="countryCode">
+                                                <input type="tel" value="" onkeypress="return isNumberKey(event)"
+                                                       class="form-control" name="phone_num" id="phone_num"
+                                                       placeholder="Contact Number">
+                                                <!-- <span class="error" id="cnumber_error">Please Enter Phone Number !
+                                                </span>  -->
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col">
+                                                <textarea maxlength="5000" rows="5" class="form-control"
+                                                          name="desc" id="desc"
+                                                          placeholder="Brief Description of Project"></textarea>
+                                                <!-- <span class="error" id="cdescription_error">Please Enter Description of Project !
+                                                </span> -->
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row mt-2">
+                                            <div class="form-group col text-center">
+                                                <input type="submit" value="SEND MESSAGE"
+                                                       class="btn btn-primary btn-rounded btn-4 font-weight-semibold mx-auto btn-v-4 btn-h-5"
+                                                       name="submit_button" id="submit_button"
+                                                       data-loading-text="Loading...">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!--<div class="col">
+                                    <div class="office-map-link">
+                                        <ul class="text-center">
+                                            <li>
+                                                <a href="https://www.google.co.in/maps/place/Kody+Technolab+Pvt.+Ltd./@23.0354843,72.4860432,18.29z/data=!4m5!3m4!1s0x395e9b6e0a7495e1:0xbf973015c3d73cd3!8m2!3d23.0357511!4d72.4862085"
+                                                   target="_blank" rel="nofollow">India</a></li>
+                                            <li class="p-0">|</li>
+                                            <li>
+                                                <a href="https://www.google.co.in/maps/place/10909+W+128th+Terrace,+Overland+Park,+KS+66213,+USA/@38.8947972,-94.7154326,17z/data=!3m1!4b1!4m5!3m4!1s0x87c0eaa72359fc3b:0x2ab4481bb6ce8a51!8m2!3d38.894793!4d-94.7132439"
+                                                   rel="nofollow" target="_blank">USA</a></li>
+                                            <li class="p-0">|</li>
+                                            <li>
+                                                <a href="https://www.google.co.in/maps/place/60+Capulet+Ln,+London,+ON+N6H+0B2,+Canada/@42.9919305,-81.2958594,14.94z/data=!4m15!1m9!4m8!1m3!2m2!1d-81.2975353!2d42.9870665!1m3!2m2!1d-81.2975612!2d42.9870951!3m4!1s0x882ef032feb7101f:0x4c8a6cecd5aa9ffc!8m2!3d42.9870746!4d-81.2975159"
+                                                   rel="nofollow" target="_blank">Canada</a></li>
+                                        </ul>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 appear-animation pl-xl-5 contact-change"
+                     data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200">
+                    <h2 class="text-4 mb-4 mt-lg-0 mt-5 text-color-dark pl-3 pr-3">Contact Info</h2>
+
+                    <div class="company-info row">
+                        <div class="col-12 col-md-4 col-lg-4 mb-lg-4 appear-animation"
+                             data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                            <div class="icon-box icon-box-style-1">
+
+                                <div class="icon-box-info mt-1">
+                                    <div class="icon-box-info-title">
+                                        <div class="row">
+                                            <div class="col-2 icon-box-icon col-lg-2 py-0 pl-0 pr-0">
+                                                <i class="mr-5 lnr lnr-phone-handset text-color-primary"></i>
+                                            </div>
+                                            <div class="col-10 col-lg-10 py-0 pl-0 pr-0">
+                                                <h3 class=" font-weight-semibold text-color-dark text-3 mb-0">Whatsup No</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                            <p><a href="tel:+91 97987 79685" rel="nofollow" title="Whatsup Number">+91 97987 79685 </a></p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 mb-lg-4 appear-animation"
+                             data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="400">
+                            <div class="icon-box icon-box-style-1">
+                                <div class="icon-box-info mt-1">
+                                    <div class="icon-box-info-title">
+                                        <div class="row">
+                                            <div class="col-2 icon-box-icon col-lg-2 py-0 pl-0 pr-0">
+                                                <i class="mr-5 lnr lnr-phone-handset text-color-primary"></i>
+                                            </div>
+                                            <div class="col-10 col-lg-10 py-0 pl-0 pr-0">
+                                                <h3 class=" font-weight-semibold text-color-dark text-3 mb-0">Phone
+                                                    Number</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p>
+                                        {% for contact_details in contact_detail %}                                                                                       <a href="tel:{{contact_details.contact_num}}" rel="nofollow" title="Phone Number">
+                                            {{contact_details.contact_num}}</a>
+                                        {% endfor %}
+                                    </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 col-lg-4 mb-lg-4 appear-animation"
+                             data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="200">
+                            <div class="icon-box icon-box-style-1">
+                                <div class="icon-box-info mt-1">
+                                    <div class="icon-box-info-title">
+                                        <div class="row">
+                                            <div class="col-2 icon-box-icon col-lg-2 py-0 pl-0 pr-0">
+                                                <i class="mr-5 lnr lnr-envelope text-color-primary"></i>
+                                            </div>
+                                            <div class="col-10 col-lg-10 py-0 pl-0 pr-0">
+                                                <h3 class=" font-weight-semibold text-color-dark text-3 mb-0">Email
+                                                    Id</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p> {% for contact_details in contact_detail %}                                                                                       <a href="mailto:{{contact_details.contact_email}}" rel="nofollow" title="Email">
+                                            {{contact_details.contact_email}}</a>
+                                        {% endfor %}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center ">
+                        <div class="contact-show d-sm-block d-none">
+                            <img src="{% static 'img/flutter-icon/contact-info.svg'%}">
+                        </div>
+                    </div>
+                    <div class="mt-2 pl-3 pr-3">
+                        <h3 class="font-weight-semibold text-color-dark text-4 mb-3 mt-4">Follow Us</h3>
+                        <ul class="social-icons social-icons-transparent social-icons-icon-light social-icons-lg">
+                            {% for social_fb__lists in social_fb__list %}
+                            <li class="{{social_fb__lists.li_class}}"><a href="{{social_fb__lists.social_link}}"
+                                                                 rel="nofollow" target="_blank" title="{{social_fb__lists.social_title}}"><i
+                                    class="{{social_fb__lists.social_icon}}"></i></a>
+                            </li>
+                            {% endfor %}
+
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- end footer -->
+    <footer id="footer" class="footer-hover-links-light footerimg footer-colors footer-primary pt-lg-3 mt-0">
+        <div class="footer-copyright  pb-3">
+            <div class="container">
+                <div class="row text-center text-md-center align-items-center">
+                    <div class="col-md-12 col-lg-12">
+                        <p class="text-md-center pb-0 mb-0">© Copyright 2016 Webs4solution, Ahmedabad, India.
+                            All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
